@@ -1,8 +1,9 @@
+import os
 import mysql.connector
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="1234",
+    password=os.getenv("DB_PASSWORD"),
     database="Student_db"
 )
 cursor=conn.cursor()
